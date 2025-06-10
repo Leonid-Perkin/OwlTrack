@@ -52,7 +52,7 @@ def format_duration(start: str, end: str) -> str:
         duration = (end_dt - start_dt).total_seconds() / 60
         hours = int(duration // 60)
         minutes = int(duration % 60)
-        if duration < 30 or duration > 60:
+        if duration < 10 or duration > 120:
             print(f"WARNING: Unusual duration {hours:02d}:{minutes:02d} for {start} → {end}")
         return f"{hours:02d}:{minutes:02d}"
     except ValueError as e:
